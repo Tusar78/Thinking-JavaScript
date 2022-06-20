@@ -9,3 +9,8 @@ if (true) {
   letVariable = 'I am let Again';
   console.log(letVariable);
 }
+
+if (true) {
+  const constVariable = 'I am const';
+  console.log(constVariable);
+}
