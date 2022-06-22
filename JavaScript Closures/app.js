@@ -15,21 +15,48 @@
 //   console.log('tusar');
 // })()
 
-const stopWatch = () => {
-  const starTime = Date.now();
+// const stopWatch = () => {
+//   const starTime = Date.now();
 
-  const getDelay = () => {
-    console.log(Date.now() - starTime);
+//   const getDelay = () => {
+//     console.log(Date.now() - starTime);
+//   }
+
+//   return getDelay;
+// }
+
+// let timer = stopWatch();
+
+// for (let i = 0; i < 100000; i++) {
+//   const a = Math.random() * 1000;  
+// }
+
+// timer();
+// console.dir(timer)
+
+// timer = null;
+
+
+// Problem
+for (var i = 0; i < 3; i++) {
+  const myFunc = () => {
+    console.log(i);
   }
 
-  return getDelay;
+  console.log(i);
+  console.dir(myFunc);
+
+  setTimeout(myFunc, 3000);
 }
 
-const timer = stopWatch();
+// Solution
+for (let i = 0; i < 3; i++) {
+  const myFunc = () => {
+    console.log(i);
+  }
 
-for (let i = 0; i < 100000; i++) {
-  const a = Math.random() * 1000;  
+  console.log(i);
+  console.dir(myFunc);
+
+  setTimeout(myFunc, 3000);
 }
-
-timer();
-console.dir(timer)
