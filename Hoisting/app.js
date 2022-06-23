@@ -1,10 +1,10 @@
 /**
- * var vs let (and const)
+ * let vs let (and const)
  * function
  */
 
 // console.log(country);
-// var country;
+// let country;
 // country = 'Bangladesh';
 
 // let language;
@@ -15,12 +15,27 @@
 // console.log(dataType);
 // dataType = 'Array';
 
-var LANGUAGE = 'Java';
-var language = 'JavaScript';
+
+// Unexpected for let
+// let LANGUAGE = 'Java';
+// let language = 'JavaScript';
+
+// function getLanguage () {
+//   if (!language) {
+//     let language = LANGUAGE;
+//   }
+//   return language;
+// }
+
+// console.log(`I love ${getLanguage()}`);
+
+// Expected behavior
+let LANGUAGE = 'Java';
+let language = 'JavaScript';
 
 function getLanguage () {
   if (!language) {
-    var language = LANGUAGE;
+    let language = LANGUAGE;
   }
   return language;
 }
