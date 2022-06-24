@@ -45,27 +45,48 @@
 // const captain = Object.create(player);
 // console.log(captain);
 
-const personMethod = {
-  eat() {
-    console.log("Person is eating!");
-  },
-  play() {
-    console.log(`${this.name} is playing!`);
-  },
-  sleep() {
-    console.log("Person is sleeping!");
-  }
-}
+// const personMethod = {
+//   eat() {
+//     console.log("Person is eating!");
+//   },
+//   play() {
+//     console.log(`${this.name} is playing!`);
+//   },
+//   sleep() {
+//     console.log("Person is sleeping!");
+//   }
+// }
 
-function Person(name, age) {
-  const person = Object.create(personMethod);
+// function Person(name, age) {
+//   const person = Object.create(personMethod);
+//   person.name = name;
+//   person.age = age;
+//   return person;
+// }
+
+// const tusar = Person('Tusar', 23);
+// const rakib = Person('Rakib', 30);
+
+// tusar.play()
+// rakib.play()
+
+// Object.prototype way
+
+console.time();
+function Person (name, age) {
+
+  const person = Object.create(Person.prototype);
   person.name = name;
   person.age = age;
   return person;
 }
+Person.prototype = {  
+  play() {
+    console.log('He is playing');
+  }
+}
 
 const tusar = Person('Tusar', 23);
-const rakib = Person('Rakib', 30);
+console.log(tusar);
 
-tusar.play()
-rakib.play()
+console.timeEnd()
