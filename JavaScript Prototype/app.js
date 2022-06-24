@@ -114,24 +114,41 @@
 
 // Direct prototypical inheritance using functional way
 
+// Person.prototype = {
+//   eat() {
+//     console.log(`${this.name} eating..!`);
+//   },
+//   play() {
+//     console.log(`${this.name} playing..!`);
+//   }  
+// }
+
+// function Person (name, age) {
+//   const person = Object.create(Person.prototype);
+//   person.name = name;
+//   person.age = age;
+
+//   return person;
+// }
+
+// const tusar = Person('Tusar', 23);
+// console.log(tusar);
+
+// Prototypical inheritance using this and new keyword
+function Person (name, age) {
+  this.name = name;
+  this.age = age;
+}
+
 Person.prototype = {
   eat() {
-    console.log(`${this.name} eating..!`);
+    console.log(`{this.name} eating!`);
   },
   play() {
-    console.log(`${this.name} playing..!`);
-  }  
+    console.log(`${this.name} playing!`);
+  }
 }
 
-function Person (name, age) {
-  const person = Object.create(Person.prototype);
-  person.name = name;
-  person.age = age;
-
-  return person;
-}
-
-const tusar = Person('Tusar', 23);
+const tusar = new Person('Tusar', 23);
 console.log(tusar);
-
-
+tusar.play()
