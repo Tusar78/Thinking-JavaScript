@@ -135,20 +135,26 @@
 // console.log(tusar);
 
 // Prototypical inheritance using this and new keyword
-function Person (name, age) {
-  this.name = name;
-  this.age = age;
-}
+// function Person (name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-Person.prototype = {
-  eat() {
-    console.log(`{this.name} eating!`);
-  },
-  play() {
-    console.log(`${this.name} playing!`);
-  }
-}
+// Person.prototype = {
+//   eat() {
+//     console.log(`{this.name} eating!`);
+//   },
+//   play() {
+//     console.log(`${this.name} playing!`);
+//   }
+// }
 
-const tusar = new Person('Tusar', 23);
-console.log(tusar);
-tusar.play()
+// const tusar = new Person('Tusar', 23);
+// console.log(tusar);
+// tusar.play()
+
+
+// Array Conclusion
+// const person = new Array();
+const person = new Number();
+console.log(person);
