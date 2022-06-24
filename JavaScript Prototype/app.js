@@ -111,3 +111,27 @@
 // const tusar = Person('Tusar', 23);
 // tusar.play();
 // const rakib = Person('Tusar', 30);
+
+// Direct prototypical inheritance using functional way
+
+Person.prototype = {
+  eat() {
+    console.log(`${this.name} eating..!`);
+  },
+  play() {
+    console.log(`${this.name} playing..!`);
+  }  
+}
+
+function Person (name, age) {
+  const person = Object.create(Person.prototype);
+  person.name = name;
+  person.age = age;
+
+  return person;
+}
+
+const tusar = Person('Tusar', 23);
+console.log(tusar);
+
+
