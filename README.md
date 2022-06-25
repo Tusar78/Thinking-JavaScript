@@ -10,3 +10,6 @@
 
 ## What is Abstract?
 - In my opinion: "Abstraction" is one of the four pillars of Object Oriented Programming. The function of "abstraction" is to make the necessary things visible to the user and to hide the unnecessary things. Let's analyze the matter with an example. When we play videos on YouTube, we see many options there, such as: Like button, Play, Pause button, etc. These can be used by ordinary users without any hesitation. But I don't know how a like button works, what's going on in the background. This is basically a game of abstract. Because the average user does not need to know how to complete a like by clicking the like button.
+
+## What is Inheritance?
+- In my opinion: Inheritance is one of the four pillars of Object Oriented Programming. "Inheritance" means inheritance. "Inheritance" provides the power to create new classes with the characteristics of the parent class.
