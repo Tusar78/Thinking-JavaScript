@@ -31,3 +31,30 @@
   > The host object is basically a part of JavaScript language not and does not support. It basically supports various host environments such as browsers. For example: window, navigator etc.
 
 - Document object.
+
+## What is Prototype?
+> Prototype
+> - Every object in JavaScript has a built-in property, which is called its prototype.
+> - The prototype is itself an object, so the prototype will have its own prototype, making what iss called a prototype chain.
+> - The chain ends when we reach a prototype that has null for its own prototype.
+> - Prototypes are the mechanism by which JavaScript objects inherit features from one another
+> Example: 
+
+``` JavaScript
+function Person (name) {
+  this.name = name;
+}
+
+Person.prototype.age = 23;
+
+const tusar = new Person('Tusar');
+
+Person.prototype = {age: 30};
+
+
+const rubi = new Person('Rubi')
+console.log(tusar);
+console.log(rubi);
+
+// Note: You should not modify the prototypes of standard JavaScript built-in objects like strings, arrays, etc. It is considered a bad practice.
+```
