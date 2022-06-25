@@ -16,3 +16,6 @@
 
 ## What is Polymorphism?
 - In my opinion: Polymorphism is one of the four pillars of Object Oriented Programming. "Polymorphism" means polymorphism. Polymorphism in JavaScript refers to the idea of reusing a single piece of code more than once.
+
+## What is Object?
+- An "object" is a combination of one or more properties. Properties are a combination of key and value. Key's value can also be a function. The function used as the value of the key is called the method.
