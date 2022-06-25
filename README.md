@@ -13,3 +13,6 @@
 
 ## What is Inheritance?
 - In my opinion: Inheritance is one of the four pillars of Object Oriented Programming. "Inheritance" means inheritance. "Inheritance" provides the power to create new classes with the characteristics of the parent class.
+
+## What is Polymorphism?
+- In my opinion: Polymorphism is one of the four pillars of Object Oriented Programming. "Polymorphism" means polymorphism. Polymorphism in JavaScript refers to the idea of reusing a single piece of code more than once.
