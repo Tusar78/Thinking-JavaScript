@@ -32,10 +32,32 @@
 // person.greet()
 
 // Constructor Function
-function Person() {
-  this.name = 'Tusar',
-  this.age = 23;
+// function Person() {
+//   this.name = 'Tusar',
+//   this.age = 23;
+// }
+
+// const person = new Person();
+// console.log(person);
+
+// Manual way to return object in function
+function Person (name, age) {
+  const person = Object.create(personMethod);
+  person.name = name;
+  person.age = age;
+
+  return person;
 }
 
-const person = new Person();
-console.log(person);
+const personMethod = {
+  play() {
+    console.log('Person is playing!');
+  },
+  eat() {
+    console.log('Person is eating!');
+  }
+}
+
+const tusar = Person('Tusar', 23);
+console.log(tusar);
+
