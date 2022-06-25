@@ -19,3 +19,15 @@
 
 ## What is Object?
 - An "object" is a combination of one or more properties. Properties are a combination of key and value. Key's value can also be a function. The function used as the value of the key is called the method.
+
+## Type of Object?
+- User defined object.
+  > User defined object refers to a custom created object. Which programmers create to handle their specific programming tasks.
+
+- Native object.
+  > Native objects are basically provided by JavaScript itself. Such as: string, number, Boolean, function etc.
+
+- Host object.
+  > The host object is basically a part of JavaScript language not and does not support. It basically supports various host environments such as browsers. For example: window, navigator etc.
+
+- Document object.
