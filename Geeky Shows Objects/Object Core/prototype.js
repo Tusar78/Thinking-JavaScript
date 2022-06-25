@@ -29,12 +29,13 @@ Person.prototype.age = 23;
 
 const tusar = new Person('Tusar');
 
-Person.prototype = {age: 30};
+// Person.prototype = {age: 30};
 
 
 const rubi = new Person('Rubi')
 console.log(tusar);
 console.log(rubi);
+console.log(rubi.__proto__);
 
 // Note: You should not modify the prototypes of standard JavaScript built-in objects like strings, arrays, etc. It is considered a bad practice.
 
