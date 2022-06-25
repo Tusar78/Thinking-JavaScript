@@ -41,23 +41,44 @@
 // console.log(person);
 
 // Manual way to return object in function
-function Person (name, age) {
-  const person = Object.create(personMethod);
-  person.name = name;
-  person.age = age;
+// function Person (name, age) {
+//   const person = Object.create(personMethod);
+//   person.name = name;
+//   person.age = age;
 
-  return person;
+//   return person;
+// }
+
+// const personMethod = {
+//   play() {
+//     console.log('Person is playing!');
+//   },
+//   eat() {
+//     console.log('Person is eating!');
+//   }
+// }
+
+// const tusar = Person('Tusar', 23);
+// console.log(tusar);
+
+// Constructor function with parameter
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
 }
 
-const personMethod = {
-  play() {
-    console.log('Person is playing!');
-  },
+Person.prototype = {
   eat() {
-    console.log('Person is eating!');
+    console.log(`${this.name} can eat!`);
+  },
+  sleep() {
+    console.log(`${this.name} can sleep!`);
+  },
+  play() {
+    console.log(`${this.name} can play football!`);
   }
 }
 
-const tusar = Person('Tusar', 23);
+const tusar = new Person('Tusar', 23);
 console.log(tusar);
-
+tusar.play()
