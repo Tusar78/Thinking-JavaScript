@@ -62,23 +62,40 @@
 // console.log(tusar);
 
 // Constructor function with parameter
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-Person.prototype = {
-  eat() {
-    console.log(`${this.name} can eat!`);
+// Person.prototype = {
+//   eat() {
+//     console.log(`${this.name} can eat!`);
+//   },
+//   sleep() {
+//     console.log(`${this.name} can sleep!`);
+//   },
+//   play() {
+//     console.log(`${this.name} can play football!`);
+//   }
+// }
+
+// const tusar = new Person('Tusar', 23);
+// console.log(tusar);
+// tusar.play()
+
+
+// getter
+const person = {
+  firstName: 'Tusar',
+  get myName() {
+    console.log(this.firstName);
   },
-  sleep() {
-    console.log(`${this.name} can sleep!`);
-  },
-  play() {
-    console.log(`${this.name} can play football!`);
+  set changeName(newName) {
+    this.firstName = newName;
   }
 }
 
-const tusar = new Person('Tusar', 23);
-console.log(tusar);
-tusar.play()
+person.changeName = 'Rakib';
+console.log(person.firstName);
+
+person.myName;
