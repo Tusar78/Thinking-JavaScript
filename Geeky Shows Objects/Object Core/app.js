@@ -85,17 +85,42 @@
 
 
 // getter
+// const person = {
+//   firstName: 'Tusar',
+//   get myName() {
+//     console.log(this.firstName);
+//   },
+//   set changeName(newName) {
+//     this.firstName = newName;
+//   }
+// }
+
+// person.changeName = 'Rakib';
+// console.log(person.firstName);
+
+// person.myName;
+
+// Getter and setter using object.defineproptery
 const person = {
   firstName: 'Tusar',
-  get myName() {
-    console.log(this.firstName);
-  },
-  set changeName(newName) {
-    this.firstName = newName;
-  }
+  lastName: 'Ali',  
 }
 
-person.changeName = 'Rakib';
-console.log(person.firstName);
+Object.defineProperty(person, 'getName', {
+  get: function () {
+    console.log(this.firstName);
+  }
+})
 
-person.myName;
+Object.defineProperty(person, 'changeName', {
+  set: function (newVal) {
+    this.firstName = newVal;
+  }
+})
+
+// Getter
+person.getName
+
+// Setter
+person.changeName = 'Esharot'
+person.getName;
