@@ -85,4 +85,6 @@ const v1 = 'Tailwind'
 const v2 = 'Bootstrap'
 const v3 = 'jQuery'
 
-sleep.call(tusar, v1, v2, v3)
+const v = [v1, v2, v3]
+// sleep.call(tusar, v1, v2, v3)
+sleep.apply(tusar, v)
