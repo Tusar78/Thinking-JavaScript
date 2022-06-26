@@ -46,26 +46,47 @@
 
 
 // Getter & Setter
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   walk() {
+//     console.log(`${this.name} can walk fast!`);
+//   }
+
+//   get getName() {
+//     return this.name;
+//   }
+
+//   set setName(newVal) {
+//     this.name = newVal;
+//   }
+// }
+
+// const tusar = new Person('Tusar', 23);
+// tusar.setName = 'Rakib'
+// console.log(tusar);
+// console.log(tusar.getName);
+
 class Person {
   constructor(name, age) {
     this.name = name;
     this.age = age;
   }
 
-  walk() {
-    console.log(`${this.name} can walk fast!`);
+  eat() {
+    console.log(`${this.name} can eating just in 5 minutes`);
   }
 
-  get getName() {
-    return this.name;
-  }
-
-  set setName(newVal) {
-    this.name = newVal;
+  static myFunc(p1, p2) {
+    return p1.age === p2.age;
   }
 }
 
-const tusar = new Person('Tusar', 23);
-tusar.setName = 'Rakib'
+const tusar = new Person('Tusar', 30);
+const rakib = new Person('Rakib', 30);
 console.log(tusar);
-console.log(tusar.getName);
+
+console.log(Person.myFunc(tusar, rakib));
