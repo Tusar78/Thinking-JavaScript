@@ -90,19 +90,29 @@
 // sleep.apply(tusar, v)
 
 
-const skill = function (s1, s2, s3) {
-  console.log(`${this.name} know ${s1}, ${s2}, and ${s3}`);
-  console.log(this);
+// const skill = function (s1, s2, s3) {
+//   console.log(`${this.name} know ${s1}, ${s2}, and ${s3}`);
+//   console.log(this);
+// }
+
+// const tusar = {
+//   name: 'Tusar',
+//   age: 23
+// }
+
+// const v1 = 'Tailwind';
+// const v2 = 'Bootstrap';
+// const v3 = 'ReactJS';
+
+// const result = skill.bind(tusar, v1, v2, v3);
+// result()
+
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+  console.log(`${this.name} is ${this.age} years old!`);
 }
 
-const tusar = {
-  name: 'Tusar',
-  age: 23
-}
-
-const v1 = 'Tailwind';
-const v2 = 'Bootstrap';
-const v3 = 'ReactJS';
-
-const result = skill.bind(tusar, v1, v2, v3);
-result()
+const tusar = new Person('Tusar', 23);
+console.log(tusar);
