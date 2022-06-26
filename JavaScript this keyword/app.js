@@ -5,8 +5,19 @@
  * 4. window
  */
 
-var printPlayerName = function (name) {
-  console.log(name);
+// var printPlayerName = function (name) {
+//   console.log(name);
+// }
+
+// printPlayerName('Tusar');
+
+const tusar = {
+  name: 'Tusar',
+  age: 23,
+  play: function() {
+    console.log(`${this.name} can playing cricket!`);
+    console.log(this);
+  }
 }
 
-printPlayerName('Tusar');
+tusar.play();
