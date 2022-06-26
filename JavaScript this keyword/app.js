@@ -70,9 +70,28 @@
 // // tusar.play()
 // tusar.father.customPrint();
 
-const sleep = function (skill1, skill2, skill3) {
-  // console.log(`${this.name} sleeping at 12 am everyday!`);
-  console.log(`${this.name} know ${skill1}, ${skill2} & ${skill3}`);
+// const sleep = function (skill1, skill2, skill3) {
+//   // console.log(`${this.name} sleeping at 12 am everyday!`);
+//   console.log(`${this.name} know ${skill1}, ${skill2} & ${skill3}`);
+//   console.log(this);
+// }
+
+// const tusar = {
+//   name: 'Tusar',
+//   age: 23
+// }
+
+// const v1 = 'Tailwind'
+// const v2 = 'Bootstrap'
+// const v3 = 'jQuery'
+
+// const v = [v1, v2, v3]
+// sleep.call(tusar, v1, v2, v3)
+// sleep.apply(tusar, v)
+
+
+const skill = function (s1, s2, s3) {
+  console.log(`${this.name} know ${s1}, ${s2}, and ${s3}`);
   console.log(this);
 }
 
@@ -81,10 +100,9 @@ const tusar = {
   age: 23
 }
 
-const v1 = 'Tailwind'
-const v2 = 'Bootstrap'
-const v3 = 'jQuery'
+const v1 = 'Tailwind';
+const v2 = 'Bootstrap';
+const v3 = 'ReactJS';
 
-const v = [v1, v2, v3]
-// sleep.call(tusar, v1, v2, v3)
-sleep.apply(tusar, v)
+const result = skill.bind(tusar, v1, v2, v3);
+result()
