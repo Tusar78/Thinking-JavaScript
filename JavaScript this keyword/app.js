@@ -11,13 +11,37 @@
 
 // printPlayerName('Tusar');
 
-const tusar = {
-  name: 'Tusar',
-  age: 23,
-  play: function() {
-    console.log(`${this.name} can playing cricket!`);
-    console.log(this);
+// const tusar = {
+//   name: 'Tusar',
+//   age: 23,
+//   play: function() {
+//     console.log(`${this.name} can playing cricket!`);
+//     console.log(this);
+//   }
+// }
+
+// tusar.play();
+
+// Number two example to understand 'this' implicit bindings
+const playFunction = function (obj) {
+  obj.play = function () {
+    console.log(`${this.name} can playing football!`);
   }
 }
 
-tusar.play();
+const tusar = {
+  name: 'Tusar',
+  age: 23
+}
+
+const rakib = {
+  name: 'Rakib',
+  age: 30
+}
+
+// Create play function
+playFunction(tusar);
+playFunction(rakib);
+
+tusar.play() 
+rakib.play() 
