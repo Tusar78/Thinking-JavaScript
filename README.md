@@ -40,6 +40,8 @@
 > - Prototypes are the mechanism by which JavaScript objects inherit features from one another
 > Example: 
 
+## Change Prototype object
+
 ``` JavaScript
 function Person (name) {
   this.name = name;
@@ -59,8 +61,9 @@ console.log(rubi);
 // Note: You should not modify the prototypes of standard JavaScript built-in objects like strings, arrays, etc. It is considered a bad practice.
 ```
 
+## Assign Method to Master Object
+
 ``` JavaScript
-// Assign Method to Master OBject
 Object.prototype.eat = function () {
   console.log(`${this.name} can eating rice in 5 minutes`);
 };
@@ -80,4 +83,40 @@ const tusar = new Person("Tusar", 23);
 console.log(tusar);
 tusar.play();
 tusar.eat();
+```
+
+## Prototypical Inheritance
+
+``` JavaScript
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+function Programmer(name, age, type, language) {
+  Person.call(this);
+  this.name = name;
+  this.age = age;
+  this.type = type;
+  this.language = language;
+}
+
+Person.prototype = {
+  sleep() {
+    console.log(`${this.name} is sleeping at 12AM`);
+  },
+};
+
+Programmer.prototype = Object.create(Person.prototype);
+Programmer.prototype.constructor = Programmer;
+
+Programmer.prototype.typeSpeed = function () {
+  console.log(`${this.name} can type keyboard in standard level`);
+};
+
+const tusar = new Programmer("Tusar", 23, "Front-end Developer", "JavaScript");
+console.log(tusar);
+console.log(`I am ${tusar.type}`);
+tusar.typeSpeed();
+tusar.sleep()
 ```

@@ -24,22 +24,22 @@
 // console.dir(myFunc.__proto__);
 
 // Assign Method to Master OBject
-Object.prototype.eat = function () {
-  console.log(`${this.name} can eating rice in 5 minutes`);
-};
+// Object.prototype.eat = function () {
+//   console.log(`${this.name} can eating rice in 5 minutes`);
+// };
 
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-}
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
 
-Person.prototype = {
-  play() {
-    console.log(`${this.name} can solve rubik's cube!`);
-  },
-};
+// Person.prototype = {
+//   play() {
+//     console.log(`${this.name} can solve rubik's cube!`);
+//   },
+// };
 
-const tusar = new Person("Tusar", 23);
-console.log(tusar);
-tusar.play();
-tusar.eat();
+// const tusar = new Person("Tusar", 23);
+// console.log(tusar);
+// tusar.play();
+// tusar.eat();
