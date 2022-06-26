@@ -70,23 +70,51 @@
 // console.log(tusar);
 // console.log(tusar.getName);
 
+// class Person {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+
+//   eat() {
+//     console.log(`${this.name} can eating just in 5 minutes`);
+//   }
+
+//   static myFunc(p1, p2) {
+//     return p1.age === p2.age;
+//   }
+// }
+
+// const tusar = new Person('Tusar', 30);
+// const rakib = new Person('Rakib', 30);
+// console.log(tusar);
+
+// console.log(Person.myFunc(tusar, rakib));
+
 class Person {
   constructor(name, age) {
     this.name = name;
     this.age = age;
   }
 
-  eat() {
-    console.log(`${this.name} can eating just in 5 minutes`);
-  }
-
-  static myFunc(p1, p2) {
-    return p1.age === p2.age;
+  play() {
+    console.log(`${this.name} can play`);
   }
 }
 
-const tusar = new Person('Tusar', 30);
-const rakib = new Person('Rakib', 30);
-console.log(tusar);
+class Cricketer extends Person {
+  constructor(name, age, type, country) {
+    super(name, age);
+    this.type = type;
+    this.country = country;
+  }
 
-console.log(Person.myFunc(tusar, rakib));
+  play() {
+    super.play();
+    console.log(`${this.name} can play cricket!`);
+  }
+}
+
+const sakib = new Cricketer('Sakib', 36, 'All Rounder', 'Country');
+console.log(sakib);
+sakib.play()

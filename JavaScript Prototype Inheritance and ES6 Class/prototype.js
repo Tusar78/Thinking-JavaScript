@@ -5,9 +5,7 @@ function Person(name, age) {
 }
 
 function Programmer(name, age, type, language) {
-  Person.call(this);
-  this.name = name;
-  this.age = age;
+  Person.call(this, name, age);
   this.type = type;
   this.language = language;
 }
