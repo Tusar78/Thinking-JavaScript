@@ -108,11 +108,21 @@
 // result()
 
 
-function Person(name, age) {
-  this.name = name;
-  this.age = age;
-  console.log(`${this.name} is ${this.age} years old!`);
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+//   console.log(`${this.name} is ${this.age} years old!`);
+// }
+
+// const tusar = new Person('Tusar', 23);
+// console.log(tusar);
+
+const play = function () {
+  console.log(this.age);
 }
 
-const tusar = new Person('Tusar', 23);
-console.log(tusar);
+const tusar = {
+  name: 'Tusar'
+}
+
+play()
