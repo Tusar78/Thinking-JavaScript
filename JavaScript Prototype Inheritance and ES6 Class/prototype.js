@@ -1,7 +1,7 @@
 // Prototypical Inheritance
 function Person(name, age) {
   this.name = name;
-  this.age = age;
+  this.age = age;  
 }
 
 function Programmer(name, age, type, language) {

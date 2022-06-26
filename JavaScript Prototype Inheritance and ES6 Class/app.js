@@ -43,3 +43,29 @@
 // console.log(tusar);
 // tusar.play();
 // tusar.eat();
+
+
+// Getter & Setter
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  walk() {
+    console.log(`${this.name} can walk fast!`);
+  }
+
+  get getName() {
+    return this.name;
+  }
+
+  set setName(newVal) {
+    this.name = newVal;
+  }
+}
+
+const tusar = new Person('Tusar', 23);
+tusar.setName = 'Rakib'
+console.log(tusar);
+console.log(tusar.getName);
