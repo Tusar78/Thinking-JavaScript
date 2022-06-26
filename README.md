@@ -58,3 +58,26 @@ console.log(rubi);
 
 // Note: You should not modify the prototypes of standard JavaScript built-in objects like strings, arrays, etc. It is considered a bad practice.
 ```
+
+``` JavaScript
+// Assign Method to Master OBject
+Object.prototype.eat = function () {
+  console.log(`${this.name} can eating rice in 5 minutes`);
+};
+
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+Person.prototype = {
+  play() {
+    console.log(`${this.name} can solve rubik's cube!`);
+  },
+};
+
+const tusar = new Person("Tusar", 23);
+console.log(tusar);
+tusar.play();
+tusar.eat();
+```
