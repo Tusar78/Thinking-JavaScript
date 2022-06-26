@@ -47,17 +47,42 @@
 // rakib.play() 
 
 // THird example using factory function
-function person (name, age) {
-  return {
-    name,
-    age,
-    play() {
-      console.log(`${this.name} can play crickets!`);
-      console.log(this);
-    }
-  }
+// function person (name, age, fatherName) {
+//   return {
+//     name,
+//     age,
+//     play: function() {
+//       console.log(`${this.name} can play crickets!`);
+//       console.log(this);
+//     },
+//     father: {
+//       name: fatherName,
+//       customPrint() {
+//         console.log(`${name} father name ${this.name}!`);
+//         console.log(this);
+//       }
+//     }
+//   }
+// }
+
+// const tusar = person('Tusar', 23, 'Md. Esharot Ali')
+// // console.log(tusar);
+// // tusar.play()
+// tusar.father.customPrint();
+
+const sleep = function (skill1, skill2, skill3) {
+  // console.log(`${this.name} sleeping at 12 am everyday!`);
+  console.log(`${this.name} know ${skill1}, ${skill2} & ${skill3}`);
+  console.log(this);
 }
 
-const tusar = person('Tusar', 23)
-console.log(tusar);
-tusar.play()
+const tusar = {
+  name: 'Tusar',
+  age: 23
+}
+
+const v1 = 'Tailwind'
+const v2 = 'Bootstrap'
+const v3 = 'jQuery'
+
+sleep.call(tusar, v1, v2, v3)
