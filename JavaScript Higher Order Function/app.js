@@ -18,11 +18,16 @@
 // result()
 
 // Not using higher order function
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// const result = [];
+
+// for (let i = 0; i < numbers.length; i++) {
+//   result.push(`${numbers[i]} x 2 = ${numbers[i] * 2}`);
+// }
+
+// console.log(result);
+
+// Using higher order function
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const result = [];
-
-for (let i = 0; i < numbers.length; i++) {
-  result.push(`${numbers[i]} x 2 = ${numbers[i] * 2}`);  
-}
-
+const result = numbers.map((number) => `${number} x 2 = ${number * 2}`);
 console.log(result);
