@@ -33,6 +33,37 @@
 // console.log(result);
 
 // Array filter as a traditional way
+// const players = [
+//   {
+//     name: 'Sakib',
+//     avg: 38.9
+//   },
+//   {
+//     name: 'Mahmudulla',
+//     avg: 36.4
+//   },
+//   {
+//     name: 'Mushfiq',
+//     avg: 35.3
+//   },
+//   {
+//     name: 'Tamim',
+//     avg: 37.8
+//   }
+// ]
+
+// const result = [];
+
+// for (let i = 0; i < players.length; i++) {
+//   const graterAvg = players[i].avg;
+//   if (graterAvg >= 37) {
+//     result.push(players[i])
+//   }    
+// }
+
+// console.log(result);
+
+// Array filter as a higherOrder way
 const players = [
   {
     name: 'Sakib',
@@ -52,13 +83,5 @@ const players = [
   }
 ]
 
-const result = [];
-
-for (let i = 0; i < players.length; i++) {
-  const graterAvg = players[i].avg;
-  if (graterAvg >= 37) {
-    result.push(players[i])
-  }    
-}
-
-console.log(result);
+const graterAvg = players.filter(player => player.avg >= 37);
+console.log(graterAvg);
