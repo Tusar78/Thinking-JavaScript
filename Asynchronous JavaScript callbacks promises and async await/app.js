@@ -12,7 +12,7 @@
 // processFunc();
 // console.log('output 2');
 
-// Asynchronous behavior
+// Asynchronous behavior simple.
 const processOrder = customer => {
   console.log(`Processing order for customer 1~`);
   setTimeout(() => {
