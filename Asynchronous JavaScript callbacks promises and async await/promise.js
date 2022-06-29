@@ -13,9 +13,15 @@ const meeting = new Promise((resolve, reject) => {
   }
 });
 
+const addToCalender = meetingDetails => {
+  const calender = `${meetingDetails.name} has been schedule on ${meetingDetails.location} at ${meetingDetails.time}`;
+  return Promise.resolve(calender);
+} 
+
 meeting
+  .then(addToCalender)
   .then((res) => {
-    console.log(res);
+    console.log(JSON.stringify(res));
   })
   .catch((err) => {
     console.log(err.message);
