@@ -89,15 +89,27 @@
 // console.log(array2);
 
 // Change immutably
-const language = {
-  name: 'JavaScript',
-  estd: '1995',
-  library: ['React', 'Vue', 'jQuery']
+// const language = {
+//   name: 'JavaScript',
+//   estd: '1995',
+//   library: ['React', 'Vue', 'jQuery']
+// }
+
+// const language1 = _.cloneDeep(language);
+
+// language.library.push('Svelt')
+
+// console.log(language);
+// console.log(language1);
+
+// Pass by reference / pass by value
+
+let a = 1;
+
+let change = val => {
+  val = 2;
 }
 
-const language1 = _.cloneDeep(language);
+change(a); // looks like passed by value
 
-language.library.push('Svelt')
-
-console.log(language);
-console.log(language1);
+console.log(a);
