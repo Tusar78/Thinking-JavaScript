@@ -69,9 +69,23 @@ let person = {
 
 let person1 = person;
 
-person = {}
+person = {} // ASsignment 
 
-console.log(person);
-console.log(person1);
+
+let array1 = ['Tusar', 'Rakib']
+let array2 = array1;
+
+// array1.push('Rubi');
+
+array1 = [];
+array1.push('Saba') // Mutation
+let array3 = array1;
+
+// Assignment
+array1 = [];
+
+console.log(array1);
+console.log(array3);
+console.log(array2);
 
 
