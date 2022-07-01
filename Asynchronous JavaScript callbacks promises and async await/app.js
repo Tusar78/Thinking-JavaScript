@@ -55,37 +55,49 @@
 
 
 // Primitive vs reference
-let a = 5;
-let b = a;
+// let a = 5;
+// let b = a;
 
-a = 6;
-console.log(a);
-console.log(b);
+// a = 6;
+// console.log(a);
+// console.log(b);
 
-let person = {
-  name: 'Tusar'
+// let person = {
+//   name: 'Tusar'
+// }
+
+
+// let person1 = person;
+
+// person = {} // ASsignment 
+
+
+// let array1 = ['Tusar', 'Rakib']
+// let array2 = array1;
+
+// // array1.push('Rubi');
+
+// array1 = [];
+// array1.push('Saba') // Mutation
+// let array3 = array1;
+
+// // Assignment
+// array1 = [];
+
+// console.log(array1);
+// console.log(array3);
+// console.log(array2);
+
+// Change immutably
+const language = {
+  name: 'JavaScript',
+  estd: '1995',
+  library: ['React', 'Vue', 'jQuery']
 }
 
+const language1 = _.cloneDeep(language);
 
-let person1 = person;
+language.library.push('Svelt')
 
-person = {} // ASsignment 
-
-
-let array1 = ['Tusar', 'Rakib']
-let array2 = array1;
-
-// array1.push('Rubi');
-
-array1 = [];
-array1.push('Saba') // Mutation
-let array3 = array1;
-
-// Assignment
-array1 = [];
-
-console.log(array1);
-console.log(array3);
-console.log(array2);
-
-
+console.log(language);
+console.log(language1);
