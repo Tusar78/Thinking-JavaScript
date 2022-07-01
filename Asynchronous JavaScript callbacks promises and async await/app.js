@@ -61,3 +61,17 @@ let b = a;
 a = 6;
 console.log(a);
 console.log(b);
+
+let person = {
+  name: 'Tusar'
+}
+
+
+let person1 = person;
+
+person = {}
+
+console.log(person);
+console.log(person1);
+
+
