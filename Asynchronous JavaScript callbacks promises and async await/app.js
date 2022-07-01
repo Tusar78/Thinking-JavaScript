@@ -27,26 +27,37 @@
 
 
 // Asynchronous using the beauty of callback
-const takeOrder = (customer, callback) => {
-  console.log(`Take order from ${customer}`);
-  callback(customer);
-}
+// const takeOrder = (customer, callback) => {
+//   console.log(`Take order from ${customer}`);
+//   callback(customer);
+// }
 
-const processOrder = (customer, callback) => {
-  console.log(`Order processing for ${customer}`);
-  setTimeout(() => {
-    console.log(`Cooking Complete!`);
-    console.log(`Order processed for ${customer}`);
-    callback(customer)
-  }, 3000);
-}
+// const processOrder = (customer, callback) => {
+//   console.log(`Order processing for ${customer}`);
+//   setTimeout(() => {
+//     console.log(`Cooking Complete!`);
+//     console.log(`Order processed for ${customer}`);
+//     callback(customer)
+//   }, 3000);
+// }
 
-const completeOrder = (customer) => {
-  console.log(`Order complete for ${customer}`);
-}
+// const completeOrder = (customer) => {
+//   console.log(`Order complete for ${customer}`);
+// }
 
-takeOrder('Tusar', (customer) => {
-  processOrder(customer, (customer) => {
-    completeOrder(customer)
-  })
-})
+// takeOrder('Tusar', (customer) => {
+//   processOrder(customer, (customer) => {
+//     completeOrder(customer)
+//   })
+// })
+
+// Promise 
+
+
+// Primitive vs reference
+let a = 5;
+let b = a;
+
+a = 6;
+console.log(a);
+console.log(b);
