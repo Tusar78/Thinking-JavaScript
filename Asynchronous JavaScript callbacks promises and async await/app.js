@@ -104,12 +104,26 @@
 
 // Pass by reference / pass by value
 
-let a = 1;
+// let a = 1;
 
-let change = val => {
-  val = 2;
+// let change = val => {
+//   val = 2;
+// }
+
+// change(a); // looks like passed by value but this is passed by reference
+
+// console.log(a);
+
+const language = {
+  name: 'JavaScript',
+  estd: 1955,
 }
 
-change(a); // looks like passed by value
+const change = val => {
+  // val = {}; // THis is assignment
+  val.name = 'Python';
+}
 
-console.log(a);
+change(language);
+
+console.log(language);
