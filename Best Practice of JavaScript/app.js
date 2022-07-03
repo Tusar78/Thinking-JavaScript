@@ -24,4 +24,7 @@ class Product {
 }
 
 const newProduct = new Product('T-Shirt').setPrice(6000).setUnit(2);
-newProduct.save()
+newProduct.save();
+(function myFunc() {
+  console.log('Tusar');
+})()
