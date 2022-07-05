@@ -11,19 +11,41 @@ const languages = ['JavaScript', 'TypeScript', 'Go', 'Python', 'C'];
 // console.log(iterator.next());
 // console.log(iterator.next());
 
-String.prototype[Symbol.iterator] = function () {
-  let count = this.length;
+// String.prototype[Symbol.iterator] = function () {
+//   let count = this.length;
+//   return {
+//     next() {
+//       if (count > 0) {
+//         count--;
+//         return {done: false, value: 'JS'}
+//       } else {
+//         return {done: true, value: undefined};
+//       }
+//     }
+//   }
+// }
+
+// const favoriteLanguage = 'JavaScript';
+// console.log(...languages);
+
+const range = (start, end, step) => {
+  let current = start;
   return {
-    next() {
-      if (count > 0) {
-        count--;
-        return {done: false, value: 'JS'}
-      } else {
-        return {done: true, value: undefined};
+    [Symbol.iterator]: function () {
+      return {
+        next() {
+          let result;
+          if (current <= end) {
+            result = {done: false, value: current};
+            current += step;
+            return result;
+          } else {
+            return {done: true, value: undefined};
+          }
+        }
       }
     }
   }
 }
 
-const favoriteLanguage = 'JavaScript';
-console.log(...languages);
+console.log([...range(1, 100, 2)]);
