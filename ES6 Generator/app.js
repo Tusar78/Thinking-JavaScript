@@ -53,12 +53,27 @@ console.log(iterator.next().value);
 
 
 // Generator Control Flow
-function* generator(a, b) {
-  let sum = yield a + b;  
-  let sum2 = yield a + b;  
+// function* generator(a, b) {
+//   let sum = yield a + b;  
+//   let sum2 = yield a + b;  
+// }
+
+// const gen = generator(10, 20);
+// console.log(gen.next());
+// console.log(gen.next()); 
+// console.log(gen.next()); 
+
+// Converted range function
+
+function* generator(start, end, step) {
+  let current = start;
+  while (current <= end) {
+    yield current;
+    current += step;
+  }
 }
 
-const gen = generator(10, 20);
-console.log(gen.next());
-console.log(gen.next()); 
-console.log(gen.next()); 
+const range = generator(1, 100, 2);
+console.log(range.next());
+console.log(range.next());
+console.log(range.next());
