@@ -12,11 +12,11 @@
 //   const person = {};
 
 //   person.name = "Tusar";
-//   person.age = 30;  
+//   person.age = 30;
 
-//   person.eat = personMethod.eat; 
-//   person.sleep = personMethod.sleep; 
-  
+//   person.eat = personMethod.eat;
+//   person.sleep = personMethod.sleep;
+
 //   return person;
 // }
 
@@ -25,7 +25,6 @@
 
 // console.log(personMethod);
 // console.log(tusar.eat());
-
 
 // const player = {
 //   name: 'Sakib',
@@ -80,7 +79,7 @@
 //   person.age = age;
 //   return person;
 // }
-// Person.prototype = {  
+// Person.prototype = {
 //   play() {
 //     console.log('He is playing');
 //   }
@@ -120,7 +119,7 @@
 //   },
 //   play() {
 //     console.log(`${this.name} playing..!`);
-//   }  
+//   }
 // }
 
 // function Person (name, age) {
@@ -153,20 +152,47 @@
 // console.log(tusar);
 // tusar.play()
 
-
 // Array Conclusion
 // const person = new Array();
 // const person = new Number();
 // console.log(person);
 
-const person = {
-  name: function() {
-    return {
-      friend: function() {
-        return ['Rakibul islam', 'sharif']
-      }
-    }
+// const person = {
+//   name: function() {
+//     return {
+//       friend: function() {
+//         return ['Rakibul islam', 'sharif']
+//       }
+//     }
+//   }
+// }
+
+// console.log(person.name().friend());
+
+const personMethod = {
+  eat() {
+    console.log('Person can eating!');
+  },
+  sleep() {
+    console.log('Person can sleeping!');
   }
 }
 
-console.log(person.name().friend());
+function myPerson(name, age) {
+  const person = {};
+
+  person.name = name;
+  person.age = age;
+
+  person.eat = personMethod.eat;
+  person.sleep = personMethod.sleep;
+
+  return person;
+}
+
+const tusar = myPerson('Tusar', 23);
+const rakib = myPerson('Rakib', 31);
+
+console.log(tusar, rakib);
+
+tusar.sleep()
