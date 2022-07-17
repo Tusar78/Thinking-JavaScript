@@ -196,23 +196,59 @@
 // console.log(tusar);
 
 // Constructor Function
-function Person(name, age) {
+// function Person(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// Person.prototype = {
+//   eat() {
+//     console.log(`${this.name} is eating!`);
+//   },
+//   sleep() {
+//     console.log(`${this.name} is sleeping!`);
+//   },
+//   play() {
+//     console.log(`${this.name} is playing!`);
+//   }
+// }
+
+// const tusar = new Person('Tusar', 23);
+// console.log(tusar);
+// tusar.play()
+
+// const numbers = new Array();
+// numbers.push(2)
+
+// numbers.prototype = function myFunc (){
+//   console.log('Tusar');
+// }
+// console.dir(numbers);
+
+// Prototypical inheritance
+function Person (name, age) {
   this.name = name;
   this.age = age;
 }
 
+function SoftwareEngineer(name, age, type, language) {
+  Person.call(this, name, age);
+  this.type = type;
+  this.language = language;
+}
+
 Person.prototype = {
   eat() {
-    console.log(`${this.name} is eating!`);
-  },
-  sleep() {
-    console.log(`${this.name} is sleeping!`);
-  },
-  play() {
-    console.log(`${this.name} is playing!`);
+    console.log(`${this.name} can eating`);
   }
 }
 
-const tusar = new Person('Tusar', 23);
+SoftwareEngineer.prototype = Person.prototype;
+SoftwareEngineer.prototype.constructor = SoftwareEngineer;
+
+SoftwareEngineer.prototype.sleep = function(){
+  console.log(`${this.name} can sleeping!`);
+}
+
+const tusar = new SoftwareEngineer('Tusar', 23, 'Frontend Developer', 'JS');
 console.log(tusar);
-tusar.play()
