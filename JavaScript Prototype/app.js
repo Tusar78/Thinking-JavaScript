@@ -163,7 +163,7 @@ const person = {
   name: function() {
     return {
       friend: function() {
-        return ['Rakib', 'sharif']
+        return ['Rakibul islam', 'sharif']
       }
     }
   }
