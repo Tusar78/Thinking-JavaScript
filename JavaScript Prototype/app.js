@@ -170,25 +170,49 @@
 // console.log(person.name().friend());
 
 // Prototype mechanism
-function Person(name, age) {
-  const person = Object.create(Person.prototype);  
-  person.name = name;
-  person.age = age;
+// function Person(name, age) {
+//   const person = Object.create(Person.prototype);  
+//   person.name = name;
+//   person.age = age;
 
-  return person;
+//   return person;
+// }
+
+// Person.prototype = {
+//   eat() {
+//     console.log(`${this.name} can eating!`);
+//   },
+//   sleep() {
+//     console.log(`${this.name} can sleeping!`);
+//   },
+//   play() {
+//     console.log(`${this.name} can playing!`);
+//   }
+// }
+
+// const tusar = Person('Tusar', 23);
+// tusar.play()
+
+// console.log(tusar);
+
+// Constructor Function
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
 }
 
 Person.prototype = {
   eat() {
-    console.log(`${this.name} can eating!`);
+    console.log(`${this.name} is eating!`);
   },
   sleep() {
-    console.log(`${this.name} can sleeping!`);
+    console.log(`${this.name} is sleeping!`);
   },
   play() {
-    console.log(`${this.name} can playing!`);
+    console.log(`${this.name} is playing!`);
   }
 }
 
-const tusar = Person('Tusar', 23);
+const tusar = new Person('Tusar', 23);
+console.log(tusar);
 tusar.play()
