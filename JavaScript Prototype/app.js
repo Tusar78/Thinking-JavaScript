@@ -156,5 +156,17 @@
 
 // Array Conclusion
 // const person = new Array();
-const person = new Number();
-console.log(person);
+// const person = new Number();
+// console.log(person);
+
+const person = {
+  name: function() {
+    return {
+      friend: function() {
+        return ['Rakib', 'sharif']
+      }
+    }
+  }
+}
+
+console.log(person.name().friend());

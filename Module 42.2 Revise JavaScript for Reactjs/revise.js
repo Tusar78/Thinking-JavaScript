@@ -14,28 +14,51 @@
     ************************ 
     N.B: As a general rule, you should always declare variables with const, if you realize that  
     the value of the variable needs to change, go back and change it to let. Use let when you know that the value of a variable will change. Use const for every other variable.
-*/ 
+*/
 
-// Examples of const: 
-const OUR_PLANET = 'Earth';
-const PI = 3.14159;
-const E = 2.71828;
+// Examples of const:
+// const OUR_PLANET = 'Earth';
+// const PI = 3.14159;
+// const E = 2.71828;
 
 // Examples of let
-let currentYear = 2022;
-let age = 23;
+// let currentYear = 2022;
+// let age = 23;
 
 // You should know 6 basics of JavaScript condition, like: [<, >, <=, >=, ==, ===, !=, !==].
 
-/** When to use let or const?✨
-    ************************ 
-    N.B: As a general rule, you should always declare variables with const, if you realize that  
-    the value of the variable needs to change, go back and change it to let. Use let when you know that the value of a variable will change. Use const for every other variable.
-*/ 
+/** Also, You should know.✨
+    ********************** 
+    1. You should know how to use operators like, "&&" or "||" 🤔
+    2. Solid understanding of if-else.
+*/
 
-// ২.১ কিভাবে কন্ডিশন লিখতে হয়, ছয় রকমের কন্ডিশন (>, <, ===, !==, >=. <=) কোনটা কোন জিনিসের জন্য ইউজ করবে। এছাড়াও && বা ।। দিয়ে কিভাবে একাধিক কন্ডিশন এর মধ্যে দুইটাই ফুলফিল করতে হবে আবার দুইটার যেকোন একটা ফুলফিল করতে হবে, সেটা কিভাবে করবে
+// Examples.
+const person = {
+  name: "Tusar",
+  age: 23,
+};
 
-// ২.২. এক বা একাধিক কন্ডিশন দিয়ে কিভাবে if-else লিখে আবার কখন if-else-if - else লিখে। সেই রকম একটা উদারহণ চিন্তা করে তুমি লিখে ফেলো
+if (person.name === "Tusar" && person.age === 23) {
+  console.log("You can access this file. Thank you 😊!");
+} else {
+  console.log("You can't.");
+}
+
+if (person.age === 18 || person.age >= 18) {
+  console.log("You can vote!");
+} else {
+  console.log("You can't!");
+}
+
+if (person.age < 13) {
+  console.log("You are child.");
+} else if (person.age <= 19) {
+  console.log("You teenager.");
+} else {
+  console.log("You are adult");
+}
+
 
 // ৩. array কিভাবে ডিক্লেয়ার করে array এর মধ্যে length, index, push, pop, indexOf, includes এইগুলা কিভাবে কাজ করে। কোনটা দিয়ে কি করে? সেগুলা কি তুমি জানো?
 
