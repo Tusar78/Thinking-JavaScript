@@ -169,20 +169,20 @@
 
 // console.log(person.name().friend());
 
-const personMethod = {
-  eat() {
-    console.log('Person can eating!');
-  },
-  sleep() {
-    console.log('Person can sleeping!');
-  },
-  play() {
-    console.log('Person can playing!');
-  }
-}
+// const personMethod = {
+//   eat() {
+//     console.log('Person can eating!');
+//   },
+//   sleep() {
+//     console.log('Person can sleeping!');
+//   },
+//   play() {
+//     console.log('Person can playing!');
+//   }
+// }
 
-function myPerson(name, age) {
-  const person = Object.create(personMethod);
+function Person(name, age) {
+  const person = Object.create(Person.prototype);
 
   person.name = name;
   person.age = age;
@@ -190,7 +190,19 @@ function myPerson(name, age) {
   return person;
 }
 
-const tusar = myPerson('Tusar', 23);
-const rakib = myPerson('Rakib', 31);
+Person.prototype = {
+  eat() {
+    console.log("Person can eating!");
+  },
+  sleep() {
+    console.log("Person can sleeping!");
+  },
+  play() {
+    console.log("Person can playing!");
+  },
+};
 
-rakib.play()
+const tusar = Person("Tusar", 23);
+const rakib = Person("Rakib", 31);
+
+rakib.play();
