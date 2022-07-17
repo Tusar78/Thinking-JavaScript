@@ -175,6 +175,9 @@ const personMethod = {
   },
   sleep() {
     console.log('Person can sleeping!');
+  },
+  play() {
+    console.log('Person can playing!');
   }
 }
 
@@ -186,13 +189,10 @@ function myPerson(name, age) {
 
   person.eat = personMethod.eat;
   person.sleep = personMethod.sleep;
+  person.play = personMethod.play;
 
   return person;
 }
 
 const tusar = myPerson('Tusar', 23);
 const rakib = myPerson('Rakib', 31);
-
-console.log(tusar, rakib);
-
-tusar.sleep()
