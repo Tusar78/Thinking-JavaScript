@@ -182,17 +182,15 @@ const personMethod = {
 }
 
 function myPerson(name, age) {
-  const person = {};
+  const person = Object.create(personMethod);
 
   person.name = name;
   person.age = age;
-
-  person.eat = personMethod.eat;
-  person.sleep = personMethod.sleep;
-  person.play = personMethod.play;
 
   return person;
 }
 
 const tusar = myPerson('Tusar', 23);
 const rakib = myPerson('Rakib', 31);
+
+rakib.play()
